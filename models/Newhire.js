@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create Schema
-const newhireSchema = new Schema({
+const NewhireSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -24,4 +24,4 @@ const newhireSchema = new Schema({
     }
 });
 
-module.exports = newhire = mongoose.model('newhire', newhireSchema);
+module.exports = Newhire = mongoose.model('newhires', NewhireSchema);

@@ -18,7 +18,7 @@ mongoose
     .catch(err => console.log(err));
 
 // Use routes
-app.use('/api/newhires', newhire);
+app.use('/api/newhires', Newhire);
 
 const port = process.env.PORT || 5000;
 
