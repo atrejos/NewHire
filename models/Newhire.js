@@ -21,6 +21,9 @@ const NewhireSchema = new Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    status: {
+        type: Array
     }
 });
 
