@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Procedure Form Page
 
-function procedure() {
+function Procedure() {
     return (
         <div>
             <div>
@@ -18,4 +18,4 @@ function procedure() {
     );
   }
   
-  export default procedure;
+  export default Procedure;

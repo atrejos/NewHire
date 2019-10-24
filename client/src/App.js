@@ -1,16 +1,52 @@
 import React from 'react';
-import AppNavbar from './components/AppNavbar';
-import AppTable from './components/AppTable';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import Flow from './components/flow';
+import Procedure from './components/procedure';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <AppNavbar />
-      <AppTable />
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/procedure">Procedure</Link>
+            </li>
+            <li>
+              <Link to="/flow">Flow</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/procedure">
+            <Procedure />
+          </Route>
+          <Route path="/flow">
+            <Flow />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+function Home() {
+  return <h2>Home - will be log in page</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
+}
+
+function Users() {
+  return <h2>Users</h2>;
+}
