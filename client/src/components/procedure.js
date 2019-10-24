@@ -1,12 +1,11 @@
 import React from 'react';
-import AppNavbar from './components/AppNavbar';
-import AppTable from './components/AppTable';
+import AppNavbar from './AppNavbar';
+import AppTable from './AppTable';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 
 //Procedure Form Page
 
-function flow() {
+function procedure() {
     return (
         <div>
             <div>
@@ -19,4 +18,4 @@ function flow() {
     );
   }
   
-  export default flow;
+  export default procedure;
