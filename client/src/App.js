@@ -2,8 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
-import Flow from './components/flow';
-import Procedure from './components/procedure';
+import Flow from './components/WorkFlow/flow';
+import Procedure from './components/ProcedureTable/procedure';
 
 export default function App() {
   return (
@@ -15,19 +15,19 @@ export default function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/procedure">Procedure</Link>
+              <Link to="/ProcedureTable/procedure">Procedure</Link>
             </li>
             <li>
-              <Link to="/flow">Flow</Link>
+              <Link to="/WorkFlow/flow">Flow</Link>
             </li>
           </ul>
         </nav>
 
         <Switch>
-          <Route path="/procedure">
+          <Route path="/ProcedureTable/procedure">
             <Procedure />
           </Route>
-          <Route path="/flow">
+          <Route path="/WorkFlow/flow">
             <Flow />
           </Route>
           <Route path="/">
