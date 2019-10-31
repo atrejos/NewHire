@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import Flow from './components/WorkFlow/flow';
 import Procedure from './components/ProcedureTable/procedure';
+import NewForm from './components/NewCand/NewCandForm';
 
 export default function App() {
   return (
@@ -20,6 +21,9 @@ export default function App() {
             <li>
               <Link to="/WorkFlow/flow">Flow</Link>
             </li>
+            <li>
+              <Link to="/NewCand/NewCandForm">NewForm</Link>
+            </li>
           </ul>
         </nav>
 
@@ -32,6 +36,9 @@ export default function App() {
           </Route>
           <Route path="/">
             <Home />
+          </Route>
+          <Route path="/NewCand/NewCandForm">
+            <NewForm />
           </Route>
         </Switch>
       </div>
