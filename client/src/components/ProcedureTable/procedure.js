@@ -8,12 +8,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Procedure() {
     return (
         <div>
-            <div>
+            {/* <div>
                 <AppNavbar />
-            </div>
-            <div>
+            </div> */}
+            <body style={{padding: '10%'}}>
                 <AppTable />
-            </div>
+            </body>
         </div>
     );
   }

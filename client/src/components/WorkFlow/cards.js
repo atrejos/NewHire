@@ -18,11 +18,11 @@ class Cardy extends React.Component {
                 <div>
                     <Card style={{ width: 'auto', backgroundColor: 'Azure' }}>
                         <CardBody>
-                            <h3>{stepName}</h3>
+                            <p>{stepName}</p>
                             <p>{stepDesc}</p>
-                            <div>
+                            {/* <div>
                                 <Button>Button</Button>
-                            </div>
+                            </div> */}
                         </CardBody>
                     </Card>
                 </div>
