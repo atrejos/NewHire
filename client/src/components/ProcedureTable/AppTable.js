@@ -39,7 +39,7 @@ const AppTable = (props) => {
         <RowElement num="19" DateIn="10/31/19" Step="Selective Service Entry" Form="Workday Action" CompletedBy="Athletics HR" Procedure="Initial of Person Completed"/>
         <RowElement num="20" DateIn="10/31/19" Step="Mail Stop Entry" Form="Workday Action" CompletedBy="Athletics HR" Procedure="Initial of Person Completed"/>
         <RowElement num="21" DateIn="10/31/19" Step="Submit Completed Onboarding Task" Form="Workday Action" CompletedBy="Athletics HR"/>
-        <RowElement num="22" DateIn="10/31/19" Step="Scan inro Laserfiche" CompletedBy="Remove Personal Information (I-9,SSN,IDs) and Scan as TIF" Procedure="Initial of Person Completed"/>      
+        <RowElement num="22" DateIn="10/31/19" Step="Scan into Laserfiche" CompletedBy="Remove Personal Information (I-9,SSN,IDs) and Scan as TIF" Procedure="Initial of Person Completed"/>      
       </tbody>
     </Table>
   );
