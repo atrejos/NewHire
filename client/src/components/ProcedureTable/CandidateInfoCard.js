@@ -18,8 +18,9 @@ class CandidateCard extends React.Component {
         return(
                 <div>
                     <Card>
-                        <ul style={{listStyleType: 'none'}}>
-                            <li>Candidate Name: {CandName}</li>
+                        <ul style={{listStyleType: 'none', paddingRight: 40}}>
+                            <li>CANDIDATE INFORMATION</li>
+                            <li>Name: {CandName}</li>
                             <li>Email: {Email}</li>
                             <li>UIN#: {UIN}</li>
                             <li>Date of Hire: {DOH}</li>
