@@ -1,6 +1,7 @@
 import React from 'react';
 import AppButtonDrop from './AppButtonDrop';
 import { Input } from 'reactstrap';
+import { EventEmitter } from 'events';
 
 class RowElement extends React.Component {
     constructor(props) {
@@ -9,19 +10,11 @@ class RowElement extends React.Component {
             isComplete: false,
             formStatus: false
         };
-    }
+    };
 
-    handleChange (event) {
-        this.setState({formStatus: true})
-    }
-
-    submitForm(e) {
-        e.preventDefault();
-        const { formStatus } = this.state;
-        const { onSubmit } = this.props;
-        onSubmit(formStatus);
-
-        this.submitForm = this.submitForm.bind(this);
+    handleChange = (event) => {
+        const isCheckbox = event.target.type === "checkbox";
+        this.setState({ [event.target.name]: isCheckbox ? event.target.checked : event.target.value })
     }
 
     render() {
@@ -35,7 +28,7 @@ class RowElement extends React.Component {
         const formStatus = this.props.formStatus;
         const checkboxName = this.props.checkboxName;
         let stat;
-        if (formStatus == true) {
+        if (this.state.checked == true) {
             stat = <p>y</p>
         }
         else{
@@ -51,7 +44,14 @@ class RowElement extends React.Component {
                         <td>{CompletedBy}</td>
                         <td>{Procedure}</td>
                         <td>{stat}</td>{/*Will make status either a progress bar or display a x/total ratio*/}
-                        <td style={{paddingTop: '0'}}><Input type="checkbox" onChange={ this.handleChange.bind(this) } name={ checkboxName } value={ this.state.isComplete } />{''}</td>
+                        <td style={{paddingTop: '0'}}>
+                            <Input 
+                                type="checkbox" 
+                                onChange={this.handleChange}
+                                checked={this.state.rememberMe}
+                                name="rememberMe"  
+                            />
+                        </td>
                 </tr>
         );
 
