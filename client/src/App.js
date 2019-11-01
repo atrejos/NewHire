@@ -34,11 +34,11 @@ export default function App() {
           <Route path="/WorkFlow/flow">
             <Flow />
           </Route>
-          <Route path="/">
-            <Home />
-          </Route>
           <Route path="/NewCand/NewCandForm">
             <NewForm />
+          </Route>
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </div>

@@ -10,8 +10,8 @@ function Procedure() {
             <div>
                 <CandidateCard />
             </div>
-            <body style={{padding: '0 10%'}}>
-                <AppTable />
+            <body style={{padding: '0'}}>
+                <AppTable style={{width: '90%'}}/>
             </body>
         </div>
     );

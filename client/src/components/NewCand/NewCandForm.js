@@ -1,56 +1,55 @@
 import React from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { relative } from 'path';
 
 const NewForm = (props) => {
   return (
-    <Form>
+    <Form style={{padding: '10%'}}>
         <Row form>
             <Col md={6}>
             <FormGroup>
-                <Label for="">First Name</Label>
-                <Input type="name" name="firstname" id="firstname" placeholder="First Name" />
+                <Label for="fName">First Name</Label>
+                <Input type="text" name="firstname" id="firstname" placeholder="First Name" />
             </FormGroup>
             </Col>
             <Col md={6}>
             <FormGroup>
-                <Label for="">Last Name</Label>
-                <Input type="name" name="lastname" id="lastname" placeholder="Last Name" />
+                <Label for="lName">Last Name</Label>
+                <Input type="text" name="lastname" id="lastname" placeholder="Last Name" />
             </FormGroup>
             </Col>
         </Row>
             <FormGroup>
-                <Label for="exampleEmail">Email</Label>
-                <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-            </FormGroup>
-            <FormGroup>
-                <Label for="exampleAddress2">Address 2</Label>
-                <Input type="text" name="address2" id="exampleAddress2" placeholder="Apartment, studio, or floor"/>
+                <Label for="Email">Email</Label>
+                <Input type="email" name="email" id="exampleEmail" placeholder="please enter valid email" />
             </FormGroup>
         <Row form>
-            <Col md={6}>
+            <Col>
             <FormGroup>
-                <Label for="exampleCity">City</Label>
-                <Input type="text" name="city" id="exampleCity"/>
+                <Label for="UIN">UIN</Label>
+                <Input type="text" name="uin" id="uin" placeholder="9 digit uin"/>
             </FormGroup>
             </Col>
-            <Col md={4}>
+            <Col>
             <FormGroup>
-                <Label for="exampleState">State</Label>
-                <Input type="text" name="state" id="exampleState"/>
+                <Label for="PIN">PIN</Label>
+                <Input type="text" name="pin" id="pin" placeholder="PIN"></Input>
             </FormGroup>
-            </Col>
-            <Col md={2}>
-            <FormGroup>
-                <Label for="exampleZip">Zip</Label>
-                <Input type="text" name="zip" id="exampleZip"/>
-            </FormGroup>  
             </Col>
         </Row>
-      <FormGroup check>
-        <Input type="checkbox" name="check" id="exampleCheck"/>
-        <Label for="exampleCheck" check>Check me out</Label>
-      </FormGroup>
-      <Button>Sign in</Button>
+        <Row form>
+            <Col sm={6}>
+                <FormGroup>
+                    <Label for="Supervisor">Supervisor Name</Label>
+                    <Input type="text" name="supervisor" id="supervisor"/>
+                </FormGroup>
+            </Col>
+            <Col sm={2}>
+                <FormGroup>
+                    <Button style={{position: 'absolute', bottom: '1rem'}}>Sign in</Button>
+                </FormGroup>
+            </Col>
+        </Row>
     </Form>
   );
 }

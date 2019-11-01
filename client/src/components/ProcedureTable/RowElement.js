@@ -26,7 +26,7 @@ class RowElement extends React.Component {
                         <td>{CompletedBy}</td>
                         <td>{Procedure}</td>
                         <td>{this.state.isComplete}</td>{/*Will make status either a progress bar or display a x/total ratio*/}
-                        <td style={{paddingTop: '10px'}}><Input type="checkbox" />{''}complete</td>
+                        <td style={{paddingTop: '0'}}><Input type="checkbox" />{''}complete</td>
                 </tr>
         );
 
