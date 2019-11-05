@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Container, Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { SteppedLineTo } from 'react-lineto';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cardy from './cards';
 import CandidateCard from '../ProcedureTable/CandidateInfoCard';
@@ -16,18 +17,19 @@ class Flow extends React.Component {
                     <div>
                         <Row>
                             <div>
-                                <CandidateCard />
+                                <CandidateCard /> 
                             </div>
                             <div>
                                 <Container>
                                     <Col>
                                         <Row>
-                                            <Col></Col><Col></Col><Col ><Cardy stepName="Student worker Hires" stepDesc="description"/></Col><Col></Col><Col></Col>
+                                            <Col></Col><Col></Col><Col ><div class="AA">A<Cardy stepName="Student worker Hires" stepDesc="description"/></div></Col><Col></Col><Col></Col>
                                         </Row>
                                         <br></br>
                                         <Row>
-                                            <Col></Col><Col><Cardy stepName="Background Check Requested" stepDesc="description"/></Col><Col><Cardy stepName="Recieved Paperwork from Hiring Supervisor" stepDesc="RTH IAWP Resume"/></Col><Col><Cardy stepName="Paperwork sent to Compliance" stepDesc="description"/></Col><Col></Col>
+                                            <Col></Col><Col><div class="BB">A<Cardy stepName="Background Check Requested" stepDesc="description"/></div></Col><Col><Cardy className="AA" stepName="Recieved Paperwork from Hiring Supervisor" stepDesc="RTH IAWP Resume"/></Col><Col><Cardy stepName="Paperwork sent to Compliance" stepDesc="description"/></Col><Col></Col>
                                         </Row>
+                                        <SteppedLineTo from="AA" to="BB"/>
                                         <br></br>
                                         <Row>
                                             <Col></Col><Col><Cardy stepName="Background Check Cleared" stepDesc="description"/></Col><Col></Col><Col><Cardy stepName="Paperwork Approved by Compliance" stepDesc="description"/></Col><Col></Col>
@@ -58,6 +60,11 @@ class Flow extends React.Component {
                                         </Row>
                                     </Col>
                                 </Container>
+                                <div>
+                                    <div className="A">Element A</div>
+                                    <div className="B">Element B</div>
+                                    <SteppedLineTo from="A" to="B" orientation="v" />
+                                </div>
                             </div>
                         </Row>
                     </div>

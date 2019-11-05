@@ -8,13 +8,13 @@ class RowElement extends React.Component {
         super(props);
         this.state = {
             isComplete: false,
-            formStatus: false
+            formStatus: false,
+            checked: false
         };
     };
 
     handleChange = (event) => {
-        const isCheckbox = event.target.type === "checkbox";
-        this.setState({ [event.target.name]: isCheckbox ? event.target.checked : event.target.value })
+        this.setState({ checked: event.target.checked })
     }
 
     render() {
