@@ -10,8 +10,6 @@ class AppTable extends React.Component {
     this.state = {
       formStatus: false
     }
-
-    this.onFormSubmit = this.onFormSubmit.bind(this);
   }
   output() {
     //
@@ -19,7 +17,11 @@ class AppTable extends React.Component {
 
   onFormSubmit(formStatus) {
     formStatus.preventDefault();
-    this.setState({formStatus:true});
+  this.setState({/*this.prop.need to update state of each row element by comparing its isComplete value to its checked value individually once this function is called*/});
+  }
+
+  myCallback = (dataFromRow) => {
+    this.state({/* */})
   }
 
   render() {
@@ -38,7 +40,7 @@ class AppTable extends React.Component {
               <th>Status</th>
             </tr>
           </thead>
-          <tbody onSubmit={this.onFormSubmit}>
+          <tbody onSubmit={this.onFormSubmit.bind(this)} formStatus={this.state.formStatus}>
             <RowElement num="1" DateIn="10/31/19" Step="Recieved Paperwork" Form=" " CompletedBy="From Hiring Supervisor" Procedure="Print and add to file" formStatus={this.onFormSubmit} checkboxName="check-box-1"/>
             <RowElement num="2" DateIn="10/31/19" Step="Request B/G Check" Form="CBC Form" CompletedBy="Athletics HR" Procedure="Print and attach email SEND EMAIL TO SUPERVISOR"/>
             <RowElement num="3" DateIn="10/31/19" Step="Send 1-3 to Compliance" Form="" CompletedBy="Athletics HR" Procedure="Print and attach email"/>

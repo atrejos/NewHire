@@ -27,8 +27,10 @@ class RowElement extends React.Component {
         const isComplete = this.props.isComplete;
         const formStatus = this.props.formStatus;
         const checkboxName = this.props.checkboxName;
+        const checked = this.state.checked;
+
         let stat;
-        if (this.state.checked == true) {
+        if (checked == true) {
             stat = <p>y</p>
         }
         else{
