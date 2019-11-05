@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import Flow from './components/WorkFlow/flow';
 import Procedure from './components/ProcedureTable/procedure';
 import NewForm from './components/NewCand/NewCandForm';
+import CheckboxContainer from './components/ProcedureTable/Checkboxes';
 
 export default function App() {
   return (
@@ -24,6 +25,9 @@ export default function App() {
             <li>
               <Link to="/NewCand/NewCandForm">NewForm</Link>
             </li>
+            <li>
+              <Link to="/ProcedureTable/Checkboxes">Checkboxes</Link>
+            </li>
           </ul>
         </nav>
 
@@ -36,6 +40,9 @@ export default function App() {
           </Route>
           <Route path="/NewCand/NewCandForm">
             <NewForm />
+          </Route>
+          <Route path="/ProcedureTable/Checkboxes">
+            <CheckboxContainer />
           </Route>
           <Route path="/">
             <Home />

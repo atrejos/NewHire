@@ -1,4 +1,6 @@
 import React from 'react';
+import { Input } from 'reactstrap'
+import PropTypes from 'prop-types';
 
 const checkboxes = [{
     name: 'check-box-1',
@@ -89,6 +91,17 @@ const checkboxes = [{
     key: 'checkBox22',
     label: 'Check Box 22'
 }];
+
+const Checkbox = ({ type = 'checkbox', name, checked = false, onChange }) => (
+    <input type={type} name={name} checked={checked} onChange={onChange} />
+  );
+  
+  Checkbox.propTypes = {
+    type: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    checked: PropTypes.bool,
+    onChange: PropTypes.func.isRequired,
+  }
 
 class CheckboxContainer extends React.Component {
     constructor(props) {
