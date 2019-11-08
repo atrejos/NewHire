@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 // Newhire Model
-const Newhire = require('../../models/Newhire');
+const Newhires = require('../../models/Newhire');
+const Users = require('../../models/Newhire');
 
 // // @route GET api/newhires // RECEIVING
 // // @desc Get All newhires
@@ -53,7 +54,18 @@ const Newhire = require('../../models/Newhire');
 //     });
 // route to create new user
 router.post('/', (req, res) => {
+    const user = new User({
+        username: req.body.username,
+        password: req.body.password,
+        auth: req.body.auth, 
+    })
 
+    try {
+        const newUser = user.save()
+        res.status(201).json(newUser)
+    } catch (err) {
+        res.status(400).json({ message: err.message })
+    }
 })
 
 // route to get one user
@@ -63,12 +75,27 @@ router.get('/:id', (req, res) => {
 
 // route to create new newhire
 router.post('/', (req, res) => {
+    const newhire = new NewHire({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName 
+    })
 
+    try {
+        const newHire = user.save()
+        res.status(201).json(newhire)
+    } catch (err) {
+        res.status(400).json({ message: err.message })
+    }
 })
 
 // route to get all newhires
 router.get('/', (req, res) => {
-    res.send('Hello World')
+    try {
+        const newhireds = Newhires.find()
+        res.json(newhireds)
+    } catch (err) {
+        res.status(500).json({ message: err.message })
+    }
 })
 
 // route to delete newhire

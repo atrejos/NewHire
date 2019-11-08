@@ -1,1 +1,12 @@
-GET http://localhost:3000/newhires
+GET http://localhost:5000/api/newhires
+
+###
+
+POST http://localhost:5000/api/newhires 
+Content-Type: application/json
+
+{
+    "username": "Robert",
+    "password": "pass123123",
+    "auth": true
+}
