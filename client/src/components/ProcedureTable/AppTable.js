@@ -1,6 +1,5 @@
 import React from 'react';
 import { Table, Button } from 'reactstrap';
-import AppButtonDrop from './AppButtonDrop';
 import RowElement from './RowElement';
 
 class AppTable extends React.Component {

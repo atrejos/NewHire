@@ -1,7 +1,5 @@
 import React from 'react';
-import AppButtonDrop from './AppButtonDrop';
 import { Input } from 'reactstrap';
-import { EventEmitter } from 'events';
 
 class RowElement extends React.Component {
     constructor(props) {
@@ -24,13 +22,10 @@ class RowElement extends React.Component {
         const CompletedBy = this.props.CompletedBy;
         const Procedure = this.props.Procedure;
         const num = this.props.num;
-        const isComplete = this.props.isComplete;
-        const formStatus = this.props.formStatus;
-        const checkboxName = this.props.checkboxName;
         const checked = this.state.checked;
 
         let stat;
-        if (checked == true) {
+        if (checked === true) {
             stat = <p>y</p>
         }
         else{

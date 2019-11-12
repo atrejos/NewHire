@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, UncontrolledPopover, PopoverHeader, PopoverBody, Button } from 'reactstrap';
+import { Card, CardBody, UncontrolledPopover, PopoverHeader, PopoverBody } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Flow Diagram Page
@@ -24,7 +24,6 @@ class Cardy extends React.Component {
     render() {
         const stepName = this.props.stepName;
         const stepDesc = this.props.stepDesc;
-        const popoverOpen = this.state.popoverOpen;
 
         return(
                 <div>

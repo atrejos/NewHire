@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col, Container, Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Row, Col, Container } from 'reactstrap';
 import { SteppedLineTo } from 'react-lineto';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cardy from './cards';
