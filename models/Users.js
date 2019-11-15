@@ -13,7 +13,7 @@ const UserSchema = new Schema({
     auth: {
         //true = HR, false = everyone else
         type: Boolean,
-        required: 'role selection is required'
+        required: 'role is required'
     },
     date: {
         type: Date,

@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 // Newhire Model
-const Newhires = require('../../models/Newhire');
-const Users = require('../../models/Users');
 
 // route to create new user
 router.post('/users', (req, res) => {
@@ -22,6 +20,11 @@ router.post('/users', (req, res) => {
 })
 
 // route to get one user
+
+router.get('/users', (req, res) => {
+    res.send('You have requested a user')
+});
+
 router.get('/users/:id', (req, res) => {
 
     const usernameId = Number(req.params.id)
