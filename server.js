@@ -2,8 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const Newhire = require('./routes/api/newhires');
-const Users = require('./routes/api/users');
+const Newhire = require('./api/routes/api/newhires');
+const Users = require('./api/routes/users');
 
 const app = express();
 
@@ -19,14 +19,16 @@ mongoose
     .catch(err => console.log(err));
 
 // Use routes
-app.use('/api/newhires', Newhire);
-app.use('/api/users' , Users)
+app.use('/routes/api/newhires', Newhire);
+app.use('/routes/api/users' , Users)
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 app.get('/models/Users', (req,res) => {
     res.send("helloo");
 });
+
+app.get('routes/api/users')
 
 app.post('models/Users')
 
