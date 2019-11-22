@@ -1,7 +1,19 @@
 const express = require('express');
 const router = express.Router();
+const Newhire = require("../models/Newhire");
 
 // Newhire Route Model
+
+// anything with /api/newhires will be redirected here
+router.get("/", (req, res, next) => {
+    Newhire.find()
+      .select("-__v")
+        
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({ error: err });
+      });
+  });
 
 // route to create new newhire
 router.post('/newhires', (req, res) => {
