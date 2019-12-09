@@ -4,7 +4,7 @@ const Newhire = require("../models/Newhire");
 
 // Newhire Route Model
 
-// anything with /api/newhires will be redirected here
+// anything with /api/newhires
 router.get("/", (req, res, next) => {
     Newhire.find()
       .select("-__v")

@@ -20,10 +20,6 @@ mongoose
 
 // Use routes
 
-//const routes = require('./api/routes')
-// Newhire(app);
-// Users(app);
-
 app.use('/api/newhires', newhireRoutes);
 app.use('/api/users' , userRoutes);
 

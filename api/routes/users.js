@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 // User Route model
-const Users = 
 
 // route to create new user
 router.post('/users', (req, res) => {
